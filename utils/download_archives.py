@@ -5,9 +5,9 @@ from helpers import fs
 
 # Usage:
 # python download_archives.py \
-# -s ftp.dlptest.com \
-# -l dlpuser@dlptest.com \
-# -p fwRhzAnR1vgig8s \
+# -s ftp.server.com \
+# -l user@server.com \
+# -p 123 \
 # -b '/base/path/on/server' \
 # -w './path/to/work/dir' \
 # 'file1' 'file2'

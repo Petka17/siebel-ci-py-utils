@@ -12,9 +12,13 @@ def __main__():
                         default='.')
     args = parser.parse_args()
 
-    file_full_path = os.path.abspath(args.archive)
+    execute(args.archive, args.dest_dir)
+
+
+def execute(archive, dest_dir='.'):
+    file_full_path = os.path.abspath(archive)
     folder_name = os.path.splitext(os.path.basename(file_full_path))[0]
-    dest_dir = os.path.abspath(os.path.join(args.dest_dir, folder_name))
+    dest_dir = os.path.abspath(os.path.join(dest_dir, folder_name))
 
     with rarfile.RarFile(file_full_path, 'r') as zf:
         zf.extractall(dest_dir)
